@@ -5,10 +5,12 @@ const Pokemon = (props) => {
     return <li key={index}>{type}</li>;
   });
   return (
-    <article>
+    <article className="pokeCard">
       <img src={props.pokemon.url} alt={props.pokemon.name} />
-      <h2> {props.pokemon.name} </h2>
-      <ul>{pokeTypes}</ul>
+      <div>
+        <h2 className="pokeTitle"> {props.pokemon.name} </h2>
+        <ul>{pokeTypes}</ul>
+      </div>
     </article>
   );
 };

@@ -4,10 +4,7 @@ import '../stylesheets/App.css';
 import data from '../data/data.json';
 
 const App = () => {
-  const [pokemons, setPokemons] = useState(data);
-
-  console.log(pokemons); // en pokemons tenemos el array con los 10 objetos
-
+  const [pokemons] = useState(data);
   return (
     <div>
       <h1>Mi lista de pokemon</h1>
