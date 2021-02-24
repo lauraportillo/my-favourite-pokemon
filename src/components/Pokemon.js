@@ -7,9 +7,9 @@ const Pokemon = (props) => {
   return (
     <article className="pokeCard">
       <img src={props.pokemon.url} alt={props.pokemon.name} />
-      <div>
+      <div className="pokeDescription">
         <h2 className="pokeTitle"> {props.pokemon.name} </h2>
-        <ul>{pokeTypes}</ul>
+        <ul className="pokeTypes">{pokeTypes}</ul>
       </div>
     </article>
   );

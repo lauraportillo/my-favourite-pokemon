@@ -2,7 +2,14 @@
   list-style: none;
   font-family: sans-serif;
 }
+.principalTitle {
+  background-color: rgb(230, 228, 228);
+  color: rgb(87, 87, 87);
 
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+}
 .pokeContainer {
   background-color: rgb(230, 228, 228);
   height: 800px;
@@ -26,7 +33,20 @@
   border: solid grey 1px;
   text-align: center;
 }
+.pokeDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
 .pokeTitle {
   text-transform: capitalize;
+  font-size: 20px;
+  color: rgb(87, 87, 87);
+}
+
+.pokeTypes {
+  font-size: 14px;
+  text-align: start;
+  color: rgb(87, 87, 87);
 }

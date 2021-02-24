@@ -7,7 +7,7 @@ const App = () => {
   const [pokemons] = useState(data);
   return (
     <div>
-      <h1>Mi lista de pokemon</h1>
+      <h1 className="principalTitle"> Mi lista de pokemon</h1>
       <PokeList pokemons={pokemons} />
     </div>
   );
