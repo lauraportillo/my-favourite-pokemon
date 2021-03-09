@@ -4,8 +4,8 @@ import Pokemon from './Pokemon';
 const PokeList = (props) => {
   const renderPokemon = props.pokemons.map((pokemon) => {
     return (
-      <li key={pokemon.id} id={pokemon.id}>
-        <Pokemon pokemon={pokemon} />
+      <li key={pokemon.id.toString()}>
+        <Pokemon pokemon={pokemon} handlePokemon={props.handlePokemon} />
       </li>
     );
   });
@@ -18,3 +18,5 @@ const PokeList = (props) => {
 };
 
 export default PokeList;
+
+// handlePokemon={props.handlePokemon} es la unión del lifting entre App y Pokemon
