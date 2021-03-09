@@ -1,0 +1,13 @@
+.containerHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerHeader__image {
+  background: url('../images/headerPokemon.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 70px;
+  width: 100%;
+}

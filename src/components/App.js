@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import Header from './Header';
 import PokeList from './PokeList';
-import '../stylesheets/App.css';
+import '../stylesheets/App.scss';
+import '../stylesheets/Reset.scss';
 import data from '../data/data.json';
 
 const App = () => {
@@ -27,14 +29,16 @@ const App = () => {
 
   return (
     <div className="container">
-      <section>
-        <h1 className="principalTitle"> Mi lista de Pokemon</h1>
-        <PokeList pokemons={pokemons} handlePokemon={handlePokemon} />
-      </section>
-      <section>
-        <h1 className="principalTitle"> Mis Pokemons favoritos</h1>
-        <PokeList pokemons={favs} handlePokemon={handlePokemon} />
-      </section>
+      <Header />
+      <main>
+        <section>
+          <PokeList pokemons={pokemons} handlePokemon={handlePokemon} />
+        </section>
+        <section>
+          <h1 className="principalTitle"> Mis Pokemons favoritos</h1>
+          <PokeList pokemons={favs} handlePokemon={handlePokemon} />
+        </section>
+      </main>
     </div>
   );
 };
