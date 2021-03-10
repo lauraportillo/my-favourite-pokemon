@@ -27,6 +27,9 @@ const App = () => {
     }
   };
 
+  // ordenado alfabéticamente de la a a la z
+  pokemons.sort((a, z) => a.name.localeCompare(z.name));
+
   return (
     <div className="container">
       <Header />

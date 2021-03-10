@@ -1,3 +1,5 @@
+// FORMAS EN CSS https://css-tricks.com/the-shapes-of-css/
+
 .pokeContainer {
   background-color: rgb(230, 228, 228);
   height: 800px;
@@ -14,13 +16,56 @@
 .pokeCard {
   width: 120px;
   height: 200px;
-  background-color: pink;
+  // background-color: pink;
+  background: linear-gradient(red, white);
   padding: 20px;
   margin-bottom: 30px;
   border-radius: 20px;
   border: solid grey 1px;
   text-align: center;
 }
+
+// FORMA DE ESTRELLA
+// .pokeCard {
+//   margin: 50px 0;
+//   position: relative;
+//   display: block;
+//   color: red;
+//   width: 0px;
+//   height: 0px;
+//   border-right: 100px solid transparent;
+//   border-bottom: 70px solid red;
+//   border-left: 100px solid transparent;
+//   // transform: rotate(35deg);
+// }
+// .pokeCard :before {
+//   border-bottom: 80px solid red;
+//   border-left: 30px solid transparent;
+//   border-right: 30px solid transparent;
+//   position: absolute;
+//   height: 0;
+//   width: 0;
+//   top: -45px;
+//   left: -65px;
+//   display: block;
+//   content: '';
+//   transform: rotate(-35deg);
+// }
+// .pokeCard :after {
+//   position: absolute;
+//   display: block;
+//   color: red;
+//   top: 3px;
+//   left: -105px;
+//   width: 0px;
+//   height: 0px;
+//   border-right: 100px solid transparent;
+//   border-bottom: 70px solid red;
+//   border-left: 100px solid transparent;
+//   transform: rotate(-70deg);
+//   content: '';
+// }
+
 .pokeDescription {
   display: flex;
   flex-direction: column;
