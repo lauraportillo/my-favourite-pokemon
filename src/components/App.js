@@ -35,11 +35,11 @@ const App = () => {
       <Header />
       <main>
         <section>
-          <PokeList pokemons={pokemons} handlePokemon={handlePokemon} />
-        </section>
-        <section>
           <h1 className="principalTitle"> Mis Pokemons favoritos</h1>
           <PokeList pokemons={favs} handlePokemon={handlePokemon} />
+        </section>
+        <section>
+          <PokeList pokemons={pokemons} handlePokemon={handlePokemon} />
         </section>
       </main>
     </div>
