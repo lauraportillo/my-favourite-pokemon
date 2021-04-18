@@ -1,5 +1,6 @@
 import React from 'react';
 import Pokemon from './Pokemon';
+import '../stylesheets/PokeList.scss';
 
 const PokeList = (props) => {
   const renderPokemon = props.pokemons.map((pokemon) => {

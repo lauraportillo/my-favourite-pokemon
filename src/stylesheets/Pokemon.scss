@@ -1,0 +1,21 @@
+.pokeCard {
+  width: 120px;
+  height: 200px;
+  background: linear-gradient(red, white);
+  padding: 20px;
+  border-radius: 20px;
+  border: solid grey 1px;
+  text-align: center;
+}
+
+.pokeTitle {
+  text-transform: capitalize;
+  font-size: 20px;
+  color: rgb(87, 87, 87);
+}
+
+.pokeTypes {
+  font-size: 14px;
+  text-align: start;
+  color: rgb(87, 87, 87);
+}
