@@ -1,5 +1,6 @@
 .containerHeader {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -10,4 +11,15 @@
   background-position: center center;
   height: 70px;
   width: 100%;
+}
+
+.containerHeader__text {
+  margin: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+.containerHeader__text--pokemon {
+  text-transform: capitalize;
+  color: red;
+  font-weight: bolder;
 }

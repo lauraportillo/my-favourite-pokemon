@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Header from './Header';
+import Favorite from './Favorite';
 import PokeList from './PokeList';
 import '../stylesheets/App.scss';
 import '../stylesheets/Reset.scss';
@@ -31,18 +32,19 @@ const App = () => {
   pokemons.sort((a, z) => a.name.localeCompare(z.name));
 
   return (
-    <div className="container">
+    <body className="container">
       <Header />
       <main>
+        <Favorite />
         <section>
-          <h1 className="principalTitle"> Mis Pokemons favoritos</h1>
           <PokeList pokemons={favs} handlePokemon={handlePokemon} />
         </section>
         <section>
+          <h2 className="principalTitle"> Choose your favorite one!</h2>
           <PokeList pokemons={pokemons} handlePokemon={handlePokemon} />
         </section>
       </main>
-    </div>
+    </body>
   );
 };
 
