@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PokeList from './PokeList';
-import '../stylesheets/App.css';
+import '../stylesheets/App.scss';
+import '../stylesheets/Reset.scss';
 import data from '../data/data.json';
 
 const App = () => {
