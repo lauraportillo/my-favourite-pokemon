@@ -1,3 +1,5 @@
+@import 'Variables';
+
 .containerHeader {
   display: flex;
   flex-direction: column;
@@ -6,11 +8,12 @@
 }
 
 .containerHeader__image {
-  background: url('../images/headerPokemon.jpg') no-repeat;
+  background: url('../images/pokemonLogo.png') no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 70px;
+  height: 150px;
   width: 100%;
+  transform: scale(0.9);
 }
 
 .containerHeader__text {
@@ -20,6 +23,6 @@
 }
 .containerHeader__text--pokemon {
   text-transform: capitalize;
-  color: red;
+  color: $color-2;
   font-weight: bolder;
 }
