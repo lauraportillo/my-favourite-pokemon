@@ -2,19 +2,27 @@
 
 // FORMAS EN CSS https://css-tricks.com/the-shapes-of-css/
 
-.containerStar {
+.fav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fav__containerStar {
   display: flex;
   justify-content: center;
   align-items: center;
   transform: scale(1.3);
+  width: 220px;
   margin: 50px;
   padding: 80px;
   border: solid $color-2 5px;
   border-radius: 50px;
 }
 
-// FORMA DE ESTRELLA
-.containerStar__start {
+// STAR SHAPE START
+.fav__containerStar--start {
   margin: 50px 0;
   position: relative;
   display: block;
@@ -26,7 +34,7 @@
   border-left: 100px solid transparent;
   transform: rotate(35deg);
 }
-.containerStar__start:before {
+.fav__containerStar--start:before {
   border-bottom: 80px solid $color-1;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
@@ -39,7 +47,7 @@
   content: '';
   transform: rotate(-35deg);
 }
-.containerStar__start:after {
+.fav__containerStar--start:after {
   position: absolute;
   display: block;
   color: $color-1;
@@ -52,4 +60,19 @@
   border-left: 100px solid transparent;
   transform: rotate(-70deg);
   content: '';
+}
+// STAR SHAPE END
+
+.fav__form {
+  margin-top: 20px;
+}
+.fav__form--input {
+  width: 220px;
+  border-radius: 10px;
+  border: solid $color-2 1px;
+  text-align: center;
+}
+.fav__subtitle {
+  margin: 20px;
+  color: $color-2;
 }
