@@ -1,7 +1,15 @@
 import React from 'react';
+import ResetButton from './ResetButton';
 import '../stylesheets/Favorite.scss';
 
-const Favorite = () => {
+const Favorite = (props) => {
+  const handleChange = (ev) => {
+    ev.preventDefault();
+    props.handleName({
+      key: 'name',
+      value: ev.target.value,
+    });
+  };
   return (
     <div className="fav">
       <div className="fav__containerStar">
@@ -11,12 +19,14 @@ const Favorite = () => {
       <form className="fav__form">
         <input
           className="fav__form--input"
-          placeholder="Enter you name..."
-          id="name"
           type="text"
           name="name"
-          required
+          id="name"
+          placeholder="Enter you name..."
+          value={props.name}
+          onChange={handleChange}
         />
+        <ResetButton />
       </form>
 
       <h3 className="fav__subtitle"> and choose your favorite one!</h3>

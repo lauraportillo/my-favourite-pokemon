@@ -10,6 +10,7 @@ const App = () => {
   const [pokemons] = useState(data);
   // en este array guardamos mis pokemons preferidos
   const [favs, setFavs] = useState([]);
+  const [name, setName] = useState('');
 
   const handlePokemon = (clickedId) => {
     const favPokemonIndex = favs.findIndex((fav) => {
