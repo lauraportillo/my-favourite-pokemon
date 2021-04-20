@@ -1,13 +1,28 @@
+@import 'Variables';
+
 .containerHeader {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .containerHeader__image {
-  background: url('../images/headerPokemon.jpg') no-repeat;
+  background: url('../images/pokemonLogo.png') no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 70px;
+  height: 150px;
   width: 100%;
+  transform: scale(0.8);
+}
+
+.containerHeader__text {
+  margin: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+.containerHeader__text--pokemon {
+  text-transform: capitalize;
+  color: $color-2;
+  font-weight: bolder;
 }

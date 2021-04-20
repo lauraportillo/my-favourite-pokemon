@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/Pokemon.scss';
 
 const Pokemon = (props) => {
   //LE METEMOS UN EVENTO

@@ -1,0 +1,29 @@
+@import 'Variables';
+
+.pokeCard {
+  width: 140px;
+  height: 210px;
+  background: linear-gradient($color-2, $color-4);
+  padding: 20px;
+  border-radius: 20px;
+  border: solid $color-5 1px;
+  margin: 10px;
+}
+
+.pokeDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokeTitle {
+  text-transform: capitalize;
+  font-size: 20px;
+  color: $color-2;
+}
+.pokeTypes {
+  font-size: 14px;
+  color: $color-5;
+  padding: 5px;
+}
