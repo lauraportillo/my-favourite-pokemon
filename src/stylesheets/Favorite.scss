@@ -1,12 +1,12 @@
 @import 'Variables';
 
 // FORMAS EN CSS https://css-tricks.com/the-shapes-of-css/
+
 .containerFav {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
 .fav {
@@ -16,8 +16,8 @@
   align-items: center;
   transform: scale(1.3);
   width: 220px;
-  margin: 50px;
-  padding: 80px;
+  margin: 20px;
+  padding: 40px;
   border: solid $color-2 5px;
   border-radius: 50px;
 }
@@ -28,6 +28,9 @@
   align-items: center;
   width: 220px;
   margin-top: 30px;
+}
+.fav__text--line {
+  margin-bottom: 5px;
 }
 
 // STAR SHAPE START

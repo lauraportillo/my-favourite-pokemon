@@ -33,9 +33,9 @@ const App = () => {
   pokemons.sort((a, z) => a.name.localeCompare(z.name));
 
   return (
-    <body className="container">
+    <body className="containerBody">
       <Header />
-      <main>
+      <main className="containerMain">
         <Favorite />
         <section>
           <PokeList pokemons={favs} handlePokemon={handlePokemon} />
