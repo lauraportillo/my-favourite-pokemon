@@ -4,9 +4,14 @@ import '../stylesheets/Favorite.scss';
 
 const Favorite = (props) => {
   return (
-    <div className="fav">
-      <div className="fav__containerStar">
-        <div className="fav__containerStar--start"></div>
+    <div className="containerFav">
+      <div className="fav">
+        <div className="fav__star"></div>
+        <div className="fav__text">
+          <span>Laura Portillo</span>
+          <span>would be</span>
+          <span>Favorite Pokemon</span>
+        </div>
       </div>
       <Form />
     </div>
