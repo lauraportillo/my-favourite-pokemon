@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import Favorite from './Favorite';
+import Form from './Form';
 import PokeList from './PokeList';
 import Footer from './Footer';
 import '../stylesheets/App.scss';
@@ -8,11 +9,12 @@ import '../stylesheets/Reset.scss';
 import data from '../data/data.json';
 
 const App = () => {
+  //estados
   const [pokemons] = useState(data);
-  // en este array guardamos mis pokemons preferidos
   const [favs, setFavs] = useState([]);
   const [name, setName] = useState('');
 
+  //definición de la función que maneja los pokemons preferidos
   const handlePokemon = (clickedId) => {
     const favPokemonIndex = favs.findIndex((fav) => {
       return fav.id === clickedId;
@@ -30,14 +32,26 @@ const App = () => {
     }
   };
 
+  //definición de la función que maneja los cambios en los inputs
+  const handleName = (inputChange) => {
+    if (inputChange.key === 'name') {
+      setName(inputChange.value);
+    }
+  };
+
+  const handleReset = () => {
+    setName('');
+  };
+
   // ordenado alfabéticamente de la a a la z
   pokemons.sort((a, z) => a.name.localeCompare(z.name));
 
   return (
-    <body className="containerBody">
+    <div className="containerBody">
       <Header />
       <main className="containerMain">
         <Favorite />
+        <Form name={name} handleName={handleName} handleReset={handleReset} />
         <section>
           <PokeList pokemons={favs} handlePokemon={handlePokemon} />
         </section>
@@ -46,7 +60,7 @@ const App = () => {
         </section>
       </main>
       <Footer />
-    </body>
+    </div>
   );
 };
 

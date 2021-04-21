@@ -1,5 +1,4 @@
 import React from 'react';
-import Form from './Form';
 import '../stylesheets/Favorite.scss';
 
 const Favorite = (props) => {
@@ -13,7 +12,6 @@ const Favorite = (props) => {
           <span className="fav__text--line">Favorite Pokemon</span>
         </div>
       </div>
-      <Form />
     </div>
   );
 };

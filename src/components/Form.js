@@ -10,8 +10,8 @@ const Form = (props) => {
   return (
     <div>
       <form onSubmit={handleForm} className="form">
-        <Input />
-        <ResetButton />
+        <Input handleName={props.handleName} name={props.name} />
+        <ResetButton handleReset={props.handleReset} />
       </form>
 
       <h3 className="form__subtitle"> and choose your favorite one!</h3>
