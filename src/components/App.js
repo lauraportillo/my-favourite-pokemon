@@ -50,7 +50,7 @@ const App = () => {
     <div className="containerBody">
       <Header />
       <main className="containerMain">
-        <Favorite />
+        <Favorite name={name} />
         <Form name={name} handleName={handleName} handleReset={handleReset} />
         <section>
           <PokeList pokemons={favs} handlePokemon={handlePokemon} />

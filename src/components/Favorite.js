@@ -7,9 +7,9 @@ const Favorite = (props) => {
       <div className="fav">
         <div className="fav__star"></div>
         <div className="fav__text">
-          <span className="fav__text--line">Laura Portillo</span>
+          <span className="fav__text--line">{props.name || 'Nombre Apellidos'}</span>
           <span className="fav__text--line">would be</span>
-          <span className="fav__text--line">Favorite Pokemon</span>
+          <span className="fav__text--line myPoke">Favorite Pokemon</span>
         </div>
       </div>
     </div>
