@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './Header';
 import Favorite from './Favorite';
 import PokeList from './PokeList';
+import Footer from './Footer';
 import '../stylesheets/App.scss';
 import '../stylesheets/Reset.scss';
 import data from '../data/data.json';
@@ -44,6 +45,7 @@ const App = () => {
           <PokeList pokemons={pokemons} handlePokemon={handlePokemon} />
         </section>
       </main>
+      <Footer />
     </body>
   );
 };
