@@ -28,15 +28,14 @@
   align-items: center;
   width: 220px;
   margin-top: 30px;
+  font-size: 16px;
+  text-transform: capitalize;
 }
-.fav__text--line {
-  margin-bottom: 5px;
-}
-
-.myPoke {
+.fav__text--favPoke {
   text-transform: capitalize;
   font-size: 20px;
   color: $color-1;
+  margin-top: 15px;
 }
 
 // STAR SHAPE START
@@ -85,7 +84,6 @@
 // STAR SHAPED
 
 .fav__star--image {
-  color: black;
   width: 100px;
   transform: translateX(-50px) rotate(-35deg) scale(0.9);
 }
