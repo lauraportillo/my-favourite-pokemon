@@ -51,6 +51,7 @@
   border-bottom: 70px solid $color-1;
   border-left: 100px solid transparent;
   transform: rotate(35deg);
+  z-index: -1;
 }
 .fav__star:before {
   border-bottom: 80px solid $color-1;
@@ -64,6 +65,7 @@
   display: block;
   content: '';
   transform: rotate(-35deg);
+  z-index: -1;
 }
 .fav__star:after {
   position: absolute;
@@ -78,5 +80,12 @@
   border-left: 100px solid transparent;
   transform: rotate(-70deg);
   content: '';
+  z-index: -1;
 }
 // STAR SHAPED
+
+.fav__star--image {
+  color: black;
+  // transform: rotate(-35deg);
+  width: 100px;
+}
