@@ -7,8 +7,7 @@ const Favorite = (props) => {
     <div className="containerFav">
       <div className="fav">
         <div className="fav__star">
-          <img className="fav__star--image" src={image} alt="pokeball" />
-          {/* <span className="fav__star--image">Holi!!</span> */}
+          <img className="fav__star--image" src={image} alt="my favorite pokemon" />
         </div>
         <div className="fav__text">
           <span className="fav__text--line">{props.name || 'Nombre Apellidos'}</span>
