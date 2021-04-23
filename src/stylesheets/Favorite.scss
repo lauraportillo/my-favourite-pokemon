@@ -86,6 +86,6 @@
 
 .fav__star--image {
   color: black;
-  // transform: rotate(-35deg);
   width: 100px;
+  transform: translateX(-50px) rotate(-35deg) scale(0.9);
 }
