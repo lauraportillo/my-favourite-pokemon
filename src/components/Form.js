@@ -8,7 +8,7 @@ const Form = (props) => {
     ev.preventDefault();
   };
   return (
-    <div>
+    <div className="containerForm">
       <form onSubmit={handleForm} className="form">
         <Input handleName={props.handleName} name={props.name} />
         <ResetButton handleReset={props.handleReset} />
