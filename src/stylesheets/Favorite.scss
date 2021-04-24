@@ -89,6 +89,22 @@
 }
 
 @media all and (min-width: 768px) {
+  .fav {
+    flex-direction: row;
+    width: 500px;
+    margin: 5px;
+    padding: 20px;
+  }
+  .fav__text {
+    align-items: flex-start;
+    width: 220px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .fav__star {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
 }
 
 @media all and (min-width: 1280px) {
