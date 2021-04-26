@@ -9,6 +9,9 @@
   border: solid $color-5 1px;
   margin: 10px;
 }
+.pokeCard:hover {
+  background: linear-gradient($color-2, $color-4);
+}
 
 .pokeDescription {
   display: flex;
