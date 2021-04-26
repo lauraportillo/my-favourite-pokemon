@@ -10,7 +10,7 @@ const Favorite = (props) => {
           <img className="fav__star--image" src={image} alt="my favorite pokemon" />
         </div>
         <div className="fav__text">
-          <span>{props.name || 'Nombre Apellidos'}</span>
+          <span>{props.name || 'Full Name'}</span>
           <span className="fav__text--favPoke">{props.pokemons.name || 'Favorite Pokemon'}</span>
         </div>
       </div>

@@ -11,6 +11,12 @@
 }
 .pokeCard:hover {
   background: linear-gradient($color-2, $color-4);
+  cursor: pointer;
+}
+.pokeCard:active {
+  border: solid $color-2 5px;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8);
 }
 
 .pokeDescription {

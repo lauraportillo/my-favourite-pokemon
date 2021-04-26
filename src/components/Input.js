@@ -16,7 +16,7 @@ const Input = (props) => {
         type="text"
         name="name"
         id="name"
-        placeholder="Enter you name..."
+        placeholder="Enter your name..."
         value={props.name}
         onChange={handleChange}
       />
