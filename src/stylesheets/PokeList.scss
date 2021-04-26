@@ -9,6 +9,9 @@
 }
 
 @media all and (min-width: 768px) {
+  .pokeList {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 @media all and (min-width: 1280px) {
