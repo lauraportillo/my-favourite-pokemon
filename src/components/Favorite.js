@@ -11,7 +11,7 @@ const Favorite = (props) => {
         </div>
         <div className="fav__text">
           <span>{props.name || 'Full Name'}</span>
-          <span className="fav__text--favPoke">{props.pokemons.name || 'Favorite Pokemon'}</span>
+          <span className="fav__text--favPoke">{/*props.pokemons.name ||*/ 'Favorite Pokemon'}</span>
         </div>
       </div>
     </div>

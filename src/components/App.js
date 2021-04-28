@@ -11,16 +11,18 @@ import data from '../data/data.json';
 const App = () => {
   //estados
   const [pokemons] = useState(data);
-  const [favs, setFavs] = useState([]);
+  const [fav, setFav] = useState({});
   const [name, setName] = useState('');
 
   //definición de la función que maneja los pokemons preferidos
   const handlePokemon = (clickedId) => {
-    const favPokemonIndex = favs.findIndex((fav) => {
-      return fav.id === clickedId;
+    const pokemonSelected = pokemons.find((pokemon) => {
+      return pokemon.id === clickedId;
     });
 
-    if (favPokemonIndex === -1) {
+    setFav(pokemonSelected);
+
+    /*if (favPokemonIndex === -1) {
       const pokemonClicked = pokemons.find((pokemon) => {
         return pokemon.id === clickedId;
       });
@@ -29,7 +31,7 @@ const App = () => {
     } else {
       favs.splice(favPokemonIndex, 1);
       setFavs([...favs]);
-    }
+    }*/
   };
 
   //definición de la función que maneja los cambios en los inputs
@@ -50,11 +52,9 @@ const App = () => {
     <div className="containerBody">
       <Header />
       <main className="containerMain">
-        <Favorite name={name} pokemons={favs} />
+        <Favorite name={name} pokemon={fav} />
         <Form name={name} handleName={handleName} handleReset={handleReset} />
-        <section>
-          <PokeList pokemons={favs} handlePokemon={handlePokemon} />
-        </section>
+
         <section>
           <PokeList pokemons={pokemons} handlePokemon={handlePokemon} />
         </section>
