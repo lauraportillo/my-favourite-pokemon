@@ -44,10 +44,7 @@ const App = () => {
       <main className="containerMain">
         <Favorite name={name} pokemon={fav} />
         <Form name={name} handleName={handleName} handleReset={handleReset} />
-
-        <section>
-          <PokeList pokemons={pokemons} handlePokemon={handlePokemon} />
-        </section>
+        <PokeList pokemons={pokemons} handlePokemon={handlePokemon} />
       </main>
       <Footer />
     </div>
