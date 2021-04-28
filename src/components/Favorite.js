@@ -19,3 +19,5 @@ const Favorite = (props) => {
 };
 
 export default Favorite;
+
+// src={props.pokemon.url || { image }}
