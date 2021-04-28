@@ -14,24 +14,13 @@ const App = () => {
   const [fav, setFav] = useState({});
   const [name, setName] = useState('');
 
-  //definición de la función que maneja los pokemons preferidos
+  //definición de la función que maneja el pokemon preferido
   const handlePokemon = (clickedId) => {
     const pokemonSelected = pokemons.find((pokemon) => {
       return pokemon.id === clickedId;
     });
 
     setFav(pokemonSelected);
-
-    /*if (favPokemonIndex === -1) {
-      const pokemonClicked = pokemons.find((pokemon) => {
-        return pokemon.id === clickedId;
-      });
-      favs.push(pokemonClicked);
-      setFavs([...favs]);
-    } else {
-      favs.splice(favPokemonIndex, 1);
-      setFavs([...favs]);
-    }*/
   };
 
   //definición de la función que maneja los cambios en los inputs
@@ -43,6 +32,7 @@ const App = () => {
 
   const handleReset = () => {
     setName('');
+    setFav({});
   };
 
   // ordenado alfabéticamente de la a a la z
