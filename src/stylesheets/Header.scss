@@ -9,11 +9,10 @@
 
 .containerHeader__image {
   background: url('../images/pokemonLogo.png') no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   height: 150px;
   width: 100%;
-  transform: scale(0.8);
 }
 .containerHeader__text {
   margin: 15px;
@@ -28,8 +27,8 @@
 
 @media all and (min-width: 768px) {
   .containerHeader__image {
-    height: 230px;
-    transform: scale(0.6);
+    height: 220px;
+    transform: scale(1.1);
   }
 }
 
