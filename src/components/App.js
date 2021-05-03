@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './Header';
 import Favorite from './Favorite';
 import Form from './Form';
+import ResetButton from './ResetButton';
 import PokeList from './PokeList';
 import Footer from './Footer';
 import '../stylesheets/App.scss';
@@ -43,7 +44,11 @@ const App = () => {
       <Header />
       <main className="containerMain">
         <Favorite name={name} pokemon={fav} />
-        <Form name={name} handleName={handleName} handleReset={handleReset} />
+        <div className="containerForm">
+          <Form name={name} handleName={handleName} />
+          <ResetButton handleReset={handleReset} />
+        </div>
+        <h3 className="subtitle"> and choose your favorite one!</h3>
         <PokeList pokemons={pokemons} handlePokemon={handlePokemon} />
       </main>
       <Footer />
