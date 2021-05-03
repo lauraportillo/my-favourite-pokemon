@@ -14,6 +14,12 @@
 .containerForm {
   margin-top: 50px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.containerForm__form {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -28,12 +34,11 @@
 }
 @media all and (min-width: 768px) {
   .subtitle {
-    margin-top: 50px;
+    margin-top: 15px;
     font-size: 20px;
   }
-  // .containerForm {
-  //   display: flex;
-  //   align-items: flex-start;
-  //   margin-left: 30px;
-  // }
+  .containerForm {
+    flex-direction: row;
+    margin-top: 40px;
+  }
 }

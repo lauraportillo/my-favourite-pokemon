@@ -45,10 +45,12 @@ const App = () => {
       <main className="containerMain">
         <Favorite name={name} pokemon={fav} />
         <div className="containerForm">
-          <Form name={name} handleName={handleName} />
-          <ResetButton handleReset={handleReset} />
+          <div className="containerForm__form">
+            <Form name={name} handleName={handleName} />
+            <ResetButton handleReset={handleReset} />
+          </div>
+          <h3 className="subtitle"> and choose your favorite one!</h3>
         </div>
-        <h3 className="subtitle"> and choose your favorite one!</h3>
         <PokeList pokemons={pokemons} handlePokemon={handlePokemon} />
       </main>
       <Footer />
