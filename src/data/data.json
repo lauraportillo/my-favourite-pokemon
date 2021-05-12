@@ -100,7 +100,7 @@
       "bug"
     ],
     "evolution": "butterfree",
-    "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/11.png"
+    "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png"
   },
   {
     "id": 12,
@@ -110,7 +110,7 @@
       "flying"
     ],
     "evolution": null,
-    "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/12.png"
+    "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png"
   },
   {
     "id": 13,
