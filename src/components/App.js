@@ -8,7 +8,7 @@ import Footer from './Footer';
 import '../stylesheets/App.scss';
 import '../stylesheets/Reset.scss';
 import data from '../data/data.json';
-import { getAllPokemon } from '../services/getDataFromApi';
+import { getAllPokemon, getPokemon } from '../services/getDataFromApi';
 
 const App = () => {
 
@@ -29,14 +29,25 @@ const App = () => {
       let response = await getAllPokemon(initialPage);
       setNextPage(response.next);
       setPrevPage(response.previous);
+      await loadingPokemon(response.results);
       setLoading(false);
-
+      //borrar
       console.log(response);
     }
     fetchData();
   }, []);
 
-
+  const loadingPokemon = async datas => {
+    let pokemonDatas = await Promise.all(
+      datas.map(async pokemon => {
+        let pokemonRecord = await getPokemon(pokemon.url);
+        return pokemonRecord;
+      })
+    );
+    setPokemonData(pokemonDatas);
+  }
+  //borrar
+  console.log(pokemonData);
 
 
   //definición de la función que maneja el pokemon preferido
