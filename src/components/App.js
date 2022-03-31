@@ -18,17 +18,17 @@ const App = () => {
 
   //usando la api:
   const [pokemonData, setPokemonData] = useState([]);
-  const [nextPage, setNextPage] = useState('');
-  const [prevPage, setPrevPage] = useState('');
+  const [nextUrl, setNextUrl] = useState('');
+  const [prevUrl, setPrevUrl] = useState('');
   const [loading, setLoading] = useState(true);
-  const initialPage = 'https://pokeapi.co/api/v2/pokemon';
+  const initialUrl = 'https://pokeapi.co/api/v2/pokemon';
 
   // useEffect
   useEffect(() => {
     async function fetchData() {
-      let response = await getAllPokemon(initialPage);
-      setNextPage(response.next);
-      setPrevPage(response.previous);
+      let response = await getAllPokemon(initialUrl);
+      setNextUrl(response.next);
+      setPrevUrl(response.previous);
       await loadingPokemon(response.results);
       setLoading(false);
       //borrar
@@ -36,6 +36,28 @@ const App = () => {
     }
     fetchData();
   }, []);
+
+
+  const next = async () => {
+    setLoading(true);
+    let data = await getAllPokemon(nextUrl);
+    await loadingPokemon(data.results);
+    setNextUrl(data.next);
+    setPrevUrl(data.previous);
+    setLoading(false);
+    console.log(data.results);
+  }
+
+  const prev = async () => {
+    if (!prevUrl) return;
+    setLoading(true);
+    let data = await getAllPokemon(prevUrl);
+    await loadingPokemon(data.results);
+    setNextUrl(data.next);
+    setPrevUrl(data.previous);
+    setLoading(false);
+    console.log(data.results);
+  }
 
   const loadingPokemon = async datas => {
     let pokemonDatas = await Promise.all(
@@ -87,6 +109,12 @@ const App = () => {
           <h3 className="subtitle"> and choose your favorite one!</h3>
         </div>
         <div>{loading ? <h1>Loading...</h1> : <h1>Data is fetched</h1>}</div>
+
+
+        <div>
+          <button onClick={prev}>previous</button>
+          <button onClick={next}>next</button>
+        </div>
 
         <PokeList pokemons={pokemons} handlePokemon={handlePokemon} />
       </main>
