@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Favorite from './Favorite';
 import Form from './Form';
@@ -8,12 +8,36 @@ import Footer from './Footer';
 import '../stylesheets/App.scss';
 import '../stylesheets/Reset.scss';
 import data from '../data/data.json';
+import { getAllPokemon } from '../services/getDataFromApi';
 
 const App = () => {
-  //estados
+
   const [pokemons] = useState(data);
   const [fav, setFav] = useState({});
   const [name, setName] = useState('');
+
+  //usando la api:
+  const [pokemonData, setPokemonData] = useState([]);
+  const [nextPage, setNextPage] = useState('');
+  const [prevPage, setPrevPage] = useState('');
+  const [loading, setLoading] = useState(true);
+  const initialPage = 'https://pokeapi.co/api/v2/pokemon';
+
+  // useEffect
+  useEffect(() => {
+    async function fetchData() {
+      let response = await getAllPokemon(initialPage);
+      setNextPage(response.next);
+      setPrevPage(response.previous);
+      setLoading(false);
+
+      console.log(response);
+    }
+    fetchData();
+  }, []);
+
+
+
 
   //definición de la función que maneja el pokemon preferido
   const handlePokemon = (clickedId) => {
