@@ -2,7 +2,9 @@ import React from 'react';
 import Pokemon from './Pokemon';
 import '../stylesheets/PokeList.scss';
 
+//AQUI LE TENGO QUE PASAR pokemonData
 const PokeList = (props) => {
+  // console.log(props);
   const renderPokemon = props.pokemons.map((pokemon) => {
     return (
       <li key={pokemon.id.toString()}>

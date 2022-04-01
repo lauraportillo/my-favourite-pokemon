@@ -7,12 +7,12 @@ import PokeList from './PokeList';
 import Footer from './Footer';
 import '../stylesheets/App.scss';
 import '../stylesheets/Reset.scss';
-import data from '../data/data.json';
+// import data from '../data/data.json';
 import { getAllPokemon, getPokemon } from '../services/getDataFromApi';
 
 const App = () => {
 
-  const [pokemons] = useState(data);
+  // const [pokemons] = useState(data);
   const [fav, setFav] = useState({});
   const [name, setName] = useState('');
 
@@ -23,6 +23,11 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const initialUrl = 'https://pokeapi.co/api/v2/pokemon';
 
+  //borrar
+  // EN POKEMON DATA TENGO UN ARRAY CON LOS 20 RESULTADOS DE CADA PÁGINA
+  // console.log(pokemons);
+  console.log(pokemonData);
+
   // useEffect
   useEffect(() => {
     async function fetchData() {
@@ -31,8 +36,6 @@ const App = () => {
       setPrevUrl(response.previous);
       await loadingPokemon(response.results);
       setLoading(false);
-      //borrar
-      console.log(response);
     }
     fetchData();
   }, []);
@@ -45,7 +48,6 @@ const App = () => {
     setNextUrl(data.next);
     setPrevUrl(data.previous);
     setLoading(false);
-    console.log(data.results);
   }
 
   const prev = async () => {
@@ -56,9 +58,8 @@ const App = () => {
     setNextUrl(data.next);
     setPrevUrl(data.previous);
     setLoading(false);
-    console.log(data.results);
   }
-
+// CAMBIAR LOS NOMBRES CUANDO BORRE DATA JSON
   const loadingPokemon = async datas => {
     let pokemonDatas = await Promise.all(
       datas.map(async pokemon => {
@@ -68,13 +69,10 @@ const App = () => {
     );
     setPokemonData(pokemonDatas);
   }
-  //borrar
-  console.log(pokemonData);
-
 
   //definición de la función que maneja el pokemon preferido
   const handlePokemon = (clickedId) => {
-    const pokemonSelected = pokemons.find((pokemon) => {
+    const pokemonSelected = pokemonData.find((pokemon) => {
       return pokemon.id === clickedId;
     });
 
@@ -94,7 +92,7 @@ const App = () => {
   };
 
   // ordenado alfabéticamente de la a a la z
-  pokemons.sort((a, z) => a.name.localeCompare(z.name));
+  pokemonData.sort((a, z) => a.name.localeCompare(z.name));
 
   return (
     <div className="containerBody">
@@ -116,7 +114,7 @@ const App = () => {
           <button onClick={next}>next</button>
         </div>
 
-        <PokeList pokemons={pokemons} handlePokemon={handlePokemon} />
+        <PokeList pokemons={pokemonData} handlePokemon={handlePokemon} />
       </main>
       <Footer />
     </div>

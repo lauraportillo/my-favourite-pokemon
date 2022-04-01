@@ -1,6 +1,6 @@
 // VER SI LUEGO CAMBIO LOS NOMBRES:
 export async function getAllPokemon(url) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -10,7 +10,7 @@ export async function getAllPokemon(url) {
 }
 
 export async function getPokemon(url) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     fetch(url)
       .then(res => res.json())
       .then(data => {
