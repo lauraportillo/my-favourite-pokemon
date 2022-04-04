@@ -30,7 +30,6 @@ const App = () => {
     fetchData();
   }, []);
 
-
   const next = async () => {
     setLoading(true);
     let data = await getAllPokemon(nextUrl);
@@ -60,7 +59,7 @@ const App = () => {
     setPokemonData(pokeData);
   }
 
-  //definición de la función que maneja el pokemon preferido
+  // Function that handles my favourite pokemon
   const handlePokemon = (clickedId) => {
     const pokemonSelected = pokemonData.find((pokemon) => {
       return pokemon.id === clickedId;
@@ -69,7 +68,7 @@ const App = () => {
     setFav(pokemonSelected);
   };
 
-  //definición de la función que maneja los cambios en los inputs
+  // Function that handles changes in the inputs
   const handleName = (inputChange) => {
     if (inputChange.key === 'userName') {
       setUserName(inputChange.value);
@@ -81,7 +80,7 @@ const App = () => {
     setFav({});
   };
 
-  // ordenado alfabéticamente de la a a la z
+  // Sorted alphabetically from a to z
   pokemonData.sort((a, z) => a.name.localeCompare(z.name));
 
   return (
