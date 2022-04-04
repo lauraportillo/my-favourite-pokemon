@@ -7,29 +7,18 @@ import PokeList from './PokeList';
 import Footer from './Footer';
 import '../stylesheets/App.scss';
 import '../stylesheets/Reset.scss';
-// import data from '../data/data.json';
 import { getAllPokemon, getPokemon } from '../services/getDataFromApi';
 
 const App = () => {
 
-  // const [pokemons] = useState(data);
-  const [fav, setFav] = useState({});
-  const [name, setName] = useState('');
-
-
-  //usando la api:
   const [pokemonData, setPokemonData] = useState([]);
   const [nextUrl, setNextUrl] = useState('');
   const [prevUrl, setPrevUrl] = useState('');
   const [loading, setLoading] = useState(true);
   const initialUrl = 'https://pokeapi.co/api/v2/pokemon';
+  const [fav, setFav] = useState({});
+  const [userName, setUserName] = useState('');
 
-  //borrar
-  // EN POKEMON DATA TENGO UN ARRAY CON LOS 20 RESULTADOS DE CADA PÁGINA
-  // console.log(pokemons);
-  // console.log(pokemonData);
-
-  // useEffect
   useEffect(() => {
     async function fetchData() {
       let response = await getAllPokemon(initialUrl);
@@ -60,15 +49,15 @@ const App = () => {
     setPrevUrl(data.previous);
     setLoading(false);
   }
-// CAMBIAR LOS NOMBRES CUANDO BORRE DATA JSON
-  const loadingPokemon = async datas => {
-    let pokemonDatas = await Promise.all(
-      datas.map(async pokemon => {
+
+  const loadingPokemon = async data => {
+    let pokeData = await Promise.all(
+      data.map(async pokemon => {
         let pokemonRecord = await getPokemon(pokemon.url);
         return pokemonRecord;
       })
     );
-    setPokemonData(pokemonDatas);
+    setPokemonData(pokeData);
   }
 
   //definición de la función que maneja el pokemon preferido
@@ -82,13 +71,13 @@ const App = () => {
 
   //definición de la función que maneja los cambios en los inputs
   const handleName = (inputChange) => {
-    if (inputChange.key === 'name') {
-      setName(inputChange.value);
+    if (inputChange.key === 'userName') {
+      setUserName(inputChange.value);
     }
   };
 
   const handleReset = () => {
-    setName('');
+    setUserName('');
     setFav({});
   };
 
@@ -99,10 +88,10 @@ const App = () => {
     <div className="containerBody">
       <Header />
       <main className="containerMain">
-        <Favorite name={name} pokemon={fav} />
+        <Favorite userName={userName} pokemon={fav} />
         <div className="containerForm">
           <div className="containerForm__form">
-            <Form name={name} handleName={handleName} />
+            <Form userName={userName} handleName={handleName} />
             <ResetButton handleReset={handleReset} />
           </div>
           <h3 className="subtitle"> and choose your favorite one!</h3>
