@@ -96,14 +96,13 @@ const App = () => {
           </div>
           <h3 className="subtitle"> and choose your favorite one!</h3>
         </div>
-        {/* <div>{loading ? <h1>Loading...</h1> : <h1>Data is fetched</h1>}</div> */}
-        {loading && <Spinner />}
-
 
         <div>
           <button onClick={prev}>previous</button>
           <button onClick={next}>next</button>
         </div>
+
+        {loading && <Spinner />}
 
         <PokeList pokemons={pokemonData} handlePokemon={handlePokemon} />
       </main>

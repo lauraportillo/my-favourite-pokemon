@@ -1,15 +1,11 @@
 .spinner{
-	height: 100px;
-	width: 100px;
-	background-position: -140px -580px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	&__image {
-		position: absolute;
-		top: 50%;
 		left: 50%;
-		margin-left: -50px;
-		margin-top: -50px;
-		width: 70px;
-		height: 70px;
+		width: 100px;
 		animation: rotate-animation 2.5s infinite linear;
 	}
 }
