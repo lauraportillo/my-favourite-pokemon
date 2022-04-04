@@ -8,7 +8,7 @@ const Form = (props) => {
   };
   return (
     <form onSubmit={handleForm} className="form">
-      <Input handleName={props.handleName} userName={props.userName} />
+      <Input handleName={props.handleName} username={props.username} />
     </form>
   );
 };

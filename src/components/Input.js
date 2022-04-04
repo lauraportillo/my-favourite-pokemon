@@ -4,7 +4,7 @@ import '../stylesheets/Input.scss';
 const Input = (props) => {
   const handleChange = (ev) => {
     props.handleName({
-      key: 'userName',
+      key: 'username',
       value: ev.target.value,
     });
   };
@@ -14,10 +14,10 @@ const Input = (props) => {
       <input
         className="form__input"
         type="text"
-        userName="userName"
-        id="userName"
+        username="username"
+        id="username"
         placeholder="Enter your name..."
-        value={props.userName}
+        value={props.username}
         onChange={handleChange}
       />
     </>

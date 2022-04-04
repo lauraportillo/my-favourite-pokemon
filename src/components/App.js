@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
+import Spinner from './Spinner';
 import Favorite from './Favorite';
 import Form from './Form';
 import ResetButton from './ResetButton';
@@ -17,7 +18,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const initialUrl = 'https://pokeapi.co/api/v2/pokemon';
   const [fav, setFav] = useState({});
-  const [userName, setUserName] = useState('');
+  const [username, SetUsername] = useState('');
 
   useEffect(() => {
     async function fetchData() {
@@ -70,13 +71,13 @@ const App = () => {
 
   // Function that handles changes in the inputs
   const handleName = (inputChange) => {
-    if (inputChange.key === 'userName') {
-      setUserName(inputChange.value);
+    if (inputChange.key === 'username') {
+      SetUsername(inputChange.value);
     }
   };
 
   const handleReset = () => {
-    setUserName('');
+    SetUsername('');
     setFav({});
   };
 
@@ -87,15 +88,16 @@ const App = () => {
     <div className="containerBody">
       <Header />
       <main className="containerMain">
-        <Favorite userName={userName} pokemon={fav} />
+        <Favorite username={username} pokemon={fav} />
         <div className="containerForm">
           <div className="containerForm__form">
-            <Form userName={userName} handleName={handleName} />
+            <Form username={username} handleName={handleName} />
             <ResetButton handleReset={handleReset} />
           </div>
           <h3 className="subtitle"> and choose your favorite one!</h3>
         </div>
-        <div>{loading ? <h1>Loading...</h1> : <h1>Data is fetched</h1>}</div>
+        {/* <div>{loading ? <h1>Loading...</h1> : <h1>Data is fetched</h1>}</div> */}
+        {loading && <Spinner />}
 
 
         <div>
