@@ -16,6 +16,7 @@ const App = () => {
   const [fav, setFav] = useState({});
   const [name, setName] = useState('');
 
+
   //usando la api:
   const [pokemonData, setPokemonData] = useState([]);
   const [nextUrl, setNextUrl] = useState('');
@@ -26,7 +27,7 @@ const App = () => {
   //borrar
   // EN POKEMON DATA TENGO UN ARRAY CON LOS 20 RESULTADOS DE CADA PÁGINA
   // console.log(pokemons);
-  console.log(pokemonData);
+  // console.log(pokemonData);
 
   // useEffect
   useEffect(() => {
