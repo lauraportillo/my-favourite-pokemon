@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -10px;
 }
 
 .pagination__item{
@@ -25,3 +26,11 @@
 .pagination__item--right{
     margin-right: 5px;
 }
+
+@media all and (min-width: 768px) {
+    .pagination{
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+  }
+  
