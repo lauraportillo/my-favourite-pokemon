@@ -1,1 +1,27 @@
 @import 'Variables';
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination__item{
+    display: flex;
+    align-items: center;
+    color:  $color-2;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+    background-color: inherit;
+    margin: 5px;
+}
+.pagination__item2{
+    color:  $color-2;
+}
+.pagination__item--left{
+    margin-left: 5px;
+}
+.pagination__item--right{
+    margin-right: 5px;
+}
