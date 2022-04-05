@@ -1,29 +1,38 @@
 @import 'Variables';
 
-.containerFooter {
-  width: 100%;
-  height: 100px;
-  color: $color-2;
+.footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.footer__item {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.footer__item:hover {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
 }
 
-.containerFooter__name:hover {
-  font-weight: bolder;
-  transition: all 0.3s ease-in-out;
-  transform: scale(1.2);
+.footer__item--icon{
+  color: $color-2;
+}
+.footer__item--icon:hover{
+  color: $color-1;
 }
 
 @media all and (min-width: 768px) {
-  .containerFooter {
-    height: 120px;
+  .footer {
+    font-size: 16px;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
-}
-
-@media all and (min-width: 768px) {
-}
-
-@media all and (min-width: 1280px) {
+  .footer__item {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 }
