@@ -4,6 +4,7 @@ import Spinner from './Spinner';
 import Favorite from './Favorite';
 import Form from './Form';
 import ResetButton from './ResetButton';
+import PaginationButtons from './PaginationButtons';
 import PokeList from './PokeList';
 import Footer from './Footer';
 import '../stylesheets/App.scss';
@@ -82,7 +83,7 @@ const App = () => {
   };
 
   // Sorted alphabetically from a to z
-  pokemonData.sort((a, z) => a.name.localeCompare(z.name));
+  // pokemonData.sort((a, z) => a.name.localeCompare(z.name));
 
   return (
     <div className="containerBody">
@@ -97,10 +98,7 @@ const App = () => {
           <h3 className="subtitle"> and choose your favorite one!</h3>
         </div>
 
-        <div>
-          <button onClick={prev}>previous</button>
-          <button onClick={next}>next</button>
-        </div>
+        <PaginationButtons prev={prev} next={next} />
 
         {loading && <Spinner />}
 

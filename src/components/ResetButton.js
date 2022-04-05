@@ -2,7 +2,7 @@ import React from 'react';
 import '../stylesheets/ResetButton.scss';
 
 const ResetButton = (props) => {
-  const handleReset = (ev) => {
+  const handleReset = () => {
     props.handleReset();
   };
 
