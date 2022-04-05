@@ -3,10 +3,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	opacity: 0.5;
 	&__image {
-		left: 50%;
 		width: 100px;
 		animation: rotate-animation 2.5s infinite linear;
+		position: absolute;
 	}
 }
 @keyframes rotate-animation {
