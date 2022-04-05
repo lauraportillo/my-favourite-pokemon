@@ -1,4 +1,3 @@
-import React from 'react';
 import '../stylesheets/PaginationButtons.scss';
 
 const PaginationButtons = (props) => {

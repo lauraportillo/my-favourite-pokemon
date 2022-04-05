@@ -1,4 +1,3 @@
-import React from 'react';
 import '../stylesheets/Favorite.scss';
 import image from '../images/pokemonBall.png';
 

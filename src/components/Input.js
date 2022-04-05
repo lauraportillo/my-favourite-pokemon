@@ -1,4 +1,3 @@
-import React from 'react';
 import '../stylesheets/Input.scss';
 
 const Input = (props) => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import '../stylesheets/Pokemon.scss';
 
 const Pokemon = ({ pokemon, handlePokemon }) => {
