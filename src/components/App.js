@@ -19,6 +19,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const initialUrl = 'https://pokeapi.co/api/v2/pokemon';
   const [fav, setFav] = useState({});
+  const [name, setName] = useState('');
   const [username, SetUsername] = useState('');
 
   useEffect(() => {
@@ -92,7 +93,7 @@ const App = () => {
         <Favorite username={username} pokemon={fav} />
         <div className="containerForm">
           <div className="containerForm__form">
-            <Form username={username} handleName={handleName} />
+            <Form name={name} username={username} handleName={handleName} />
             <ResetButton handleReset={handleReset} />
           </div>
           <h3 className="subtitle"> and choose your favorite one!</h3>
