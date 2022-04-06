@@ -29,16 +29,19 @@
   color: $color-2;
   outline: inherit;
 }
-.subtitle {
-  margin: 20px;
-  font-size: 18px;
-  color: $color-2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 @media all and (min-width: 768px) {
+  .form {
+    flex-direction: row; 
+  }
+  .form__input {  
+    margin-bottom: 0;
+    margin-right: 5px;
+    width: 250px;
+  }
+  .form__reset {
+    width: 100px;
+  }
 }
 
 @media all and (min-width: 1280px) {

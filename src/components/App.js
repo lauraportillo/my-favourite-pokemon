@@ -109,6 +109,7 @@ const App = () => {
       <main className="containerMain">
         <Favorite username={username} pokemon={fav} />
         <Form name={name} handleFilter={handleFilter} username={username} handleName={handleName} handleReset={handleReset} />
+        <h3 className="subtitle"> choose your favorite one!</h3>
         <PaginationButtons prev={prev} next={next} />
         {loading && <Spinner />}
 

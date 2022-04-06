@@ -10,3 +10,12 @@
 .containerMain {
   margin-top: 50px;
 }
+
+.subtitle {
+  margin: 20px;
+  font-size: 18px;
+  color: $color-2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

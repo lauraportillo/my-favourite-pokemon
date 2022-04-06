@@ -12,7 +12,6 @@ const Form = (props) => {
       <Input handleName={props.handleName} username={props.username} />
       <FilterByName handleFilter={props.handleFilter} name={props.name} />
       <ResetButton handleReset={props.handleReset} />
-      <h3 className="subtitle"> choose your favorite one!</h3>
     </form>
   );
 };
