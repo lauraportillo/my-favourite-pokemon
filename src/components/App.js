@@ -24,6 +24,8 @@ const App = () => {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
 
+  // console.log(pokemonData);
+
   useEffect(() => {
     async function fetchData() {
       let response = await getAllPokemon(initialUrl);
@@ -31,8 +33,10 @@ const App = () => {
       setPrevUrl(response.previous);
       await loadingPokemon(response.results);
       setLoading(false);
+      // console.log(response);
     }
     fetchData();
+
   }, []);
 
   const next = async () => {

@@ -1,4 +1,4 @@
-import '../stylesheets/Input.scss';
+import '../stylesheets/Form.scss';
 
 const Input = (props) => {
   const handleChange = (ev) => {

@@ -1,4 +1,4 @@
-import '../stylesheets/FilterByName.scss';
+import '../stylesheets/Form.scss';
 
 const FilterByName = (props) => {
   const handleChange = (ev) => {
@@ -10,12 +10,11 @@ const FilterByName = (props) => {
   return (
     <>
       <input
-        className="containerFilter__name"
+        className="form__input"
         type="text"
         name="name"
         id="name"
         placeholder="Find your pokemon..."
-        //estado sincronizado con el input: pinto el estado en el input abuela-madre-nieta
         value={props.name}
         onChange={handleChange}
       />

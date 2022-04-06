@@ -1,4 +1,3 @@
-// VER SI LUEGO CAMBIO LOS NOMBRES:
 export async function getAllPokemon(url) {
   return new Promise((resolve) => {
     fetch(url)
