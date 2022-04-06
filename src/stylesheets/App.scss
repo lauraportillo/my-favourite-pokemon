@@ -10,35 +10,3 @@
 .containerMain {
   margin-top: 50px;
 }
-
-.containerForm {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.containerForm__form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.subtitle {
-  margin: 20px;
-  font-size: 19px;
-  color: $color-2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media all and (min-width: 768px) {
-  .subtitle {
-    margin-top: 15px;
-    font-size: 20px;
-  }
-  .containerForm {
-    flex-direction: row;
-    margin-top: 40px;
-  }
-}

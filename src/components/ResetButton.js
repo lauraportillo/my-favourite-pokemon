@@ -1,4 +1,4 @@
-import '../stylesheets/ResetButton.scss';
+import '../stylesheets/Form.scss';
 
 const ResetButton = (props) => {
   const handleReset = () => {
@@ -7,7 +7,7 @@ const ResetButton = (props) => {
 
   return (
     <>
-      <button className="reset" onClick={handleReset}>
+      <button className="form__reset" onClick={handleReset}>
         <i className="far fa-trash-alt reset__icon"></i>
       </button>
     </>

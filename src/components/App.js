@@ -3,13 +3,12 @@ import Header from './Header';
 import Spinner from './Spinner';
 import Favorite from './Favorite';
 import Form from './Form';
-import ResetButton from './ResetButton';
 import PaginationButtons from './PaginationButtons';
 import PokeList from './PokeList';
 import Footer from './Footer';
+import { getAllPokemon, getPokemon } from '../services/getDataFromApi';
 import '../stylesheets/App.scss';
 import '../stylesheets/Reset.scss';
-import { getAllPokemon, getPokemon } from '../services/getDataFromApi';
 
 const App = () => {
 
@@ -109,21 +108,12 @@ const App = () => {
       <Header />
       <main className="containerMain">
         <Favorite username={username} pokemon={fav} />
-        <div className="containerForm">
-          <div className="containerForm__form">
-            <Form name={name} handleFilter={handleFilter} username={username} handleName={handleName} />
-            <ResetButton handleReset={handleReset} />
-          </div>
-          <h3 className="subtitle"> and choose your favorite one!</h3>
-        </div>
-
+        <Form name={name} handleFilter={handleFilter} username={username} handleName={handleName} handleReset={handleReset} />
         <PaginationButtons prev={prev} next={next} />
-
         {loading && <Spinner />}
 
         {/* <PokeList pokemons={pokemonData} handlePokemon={handlePokemon} /> */}
         <PokeList pokemons={filterPokemons} handlePokemon={handlePokemon} />
-
 
       </main>
       <Footer />
