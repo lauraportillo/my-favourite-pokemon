@@ -9,8 +9,11 @@ import Footer from './Footer';
 import { getAllPokemon, getPokemon } from '../services/getDataFromApi';
 import '../stylesheets/App.scss';
 import '../stylesheets/Reset.scss';
+import { usePokemon } from '../hooks/usePokemon';
 
 const App = () => {
+
+  usePokemon();
 
   // ERROR: TENEMOS QUE PODER ENCONTRAR LOS NOMBRES DE TODAS LAS PÁGINAS!!!!!
 
