@@ -17,3 +17,5 @@ export const fetchAllPokemons = async () => {
     });
 }
 
+// fetchAllPokemons me devuelve un array ya transformado
+
