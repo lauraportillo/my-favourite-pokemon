@@ -12,8 +12,11 @@ import '../stylesheets/Reset.scss';
 import { usePokemon } from '../hooks/usePokemon';
 
 const App = () => {
-
+// en pokemons tengo un array con todos los pokemons, nombre, foto y id PERO NO TENGO LOS TIPOS...
   const { isLoading, pokemons } = usePokemon();
+
+  console.log(pokemons);
+  console.log(isLoading);
 
   // ERROR: TENEMOS QUE PODER ENCONTRAR LOS NOMBRES DE TODAS LAS PÁGINAS!!!!!
 
@@ -26,8 +29,6 @@ const App = () => {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
 
-  // console.log(pokemonData);
-
   useEffect(() => {
     async function fetchData() {
       let response = await getAllPokemon(initialUrl);
@@ -35,7 +36,6 @@ const App = () => {
       setPrevUrl(response.previous);
       await loadingPokemon(response.results);
       setLoading(false);
-      // console.log(response);
     }
     fetchData();
 
