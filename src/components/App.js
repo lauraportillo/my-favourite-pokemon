@@ -13,7 +13,7 @@ import { usePokemon } from '../hooks/usePokemon';
 
 const App = () => {
 
-  usePokemon();
+  const { isLoading, pokemons } = usePokemon();
 
   // ERROR: TENEMOS QUE PODER ENCONTRAR LOS NOMBRES DE TODAS LAS PÁGINAS!!!!!
 
