@@ -13,17 +13,17 @@ import { usePokemon } from '../hooks/usePokemon';
 
 const App = () => {
 // en pokemons tengo un array con todos los pokemons, nombre, foto y id PERO NO TENGO LOS TIPOS...
-  const { isLoading, pokemons } = usePokemon();
+  const { isLoading, pokemons: pokemonData } = usePokemon();
 
-  console.log(pokemons);
-  console.log(isLoading);
+  console.log(pokemonData);
+  // console.log(isLoading);
 
   // ERROR: TENEMOS QUE PODER ENCONTRAR LOS NOMBRES DE TODAS LAS PÁGINAS!!!!!
 
-  const [pokemonData, setPokemonData] = useState([]);
+  // const [pokemonData, setPokemonData] = useState([]);
   const [fav, setFav] = useState({});
   const [name, setName] = useState('');
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState(''); 
 
 
 
