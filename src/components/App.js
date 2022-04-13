@@ -28,7 +28,9 @@ const App = () => {
   }
 
   const next = () => {
-    setCurrentPage(currentPage + 20);
+    if (pokemons.filter(poke => poke.name.includes(name)).length > currentPage + 20) {
+      setCurrentPage(currentPage + 20);
+    }
   }
 
   const prev = () => {
