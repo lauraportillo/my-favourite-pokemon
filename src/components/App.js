@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { usePokemon } from '../hooks/usePokemon';
 import Header from './Header';
-// import Spinner from './Spinner';
+import Spinner from './Spinner';
 import Favorite from './Favorite';
 import Form from './Form';
 import PaginationButtons from './PaginationButtons';
 import PokeList from './PokeList';
 import Footer from './Footer';
-// import { getAllPokemon, getPokemon } from '../services/getDataFromApi';
 import '../stylesheets/App.scss';
 import '../stylesheets/Reset.scss';
-import { usePokemon } from '../hooks/usePokemon';
+
 
 const App = () => {
 // en pokemons tengo un array con todos los pokemons, nombre, foto y id PERO NO TENGO LOS TIPOS...
@@ -74,7 +74,7 @@ const App = () => {
         <h3 className="subtitle"> choose your favorite one!</h3>
         {/* <PaginationButtons prev={prev} next={next} /> */}
         <PaginationButtons />
-        {/* {loading && <Spinner />} */}
+        {isLoading && <Spinner />}
 
         {/* <PokeList pokemons={pokemonData} handlePokemon={handlePokemon} /> */}
         <PokeList pokemons={filterPokemons} handlePokemon={handlePokemon} />
