@@ -8,7 +8,7 @@ const Favorite = ({ username, pokemon }) => {
     <div className="containerFav">
       <div className="fav">
         <div className="fav__star">
-          <img className="fav__star--image" src={pokemon?.sprites?.front_default || image} alt="my favorite pokemon" />
+          <img className="fav__star--image" src={pokemon?.pic || image} alt="my favorite pokemon" />
         </div>
         <div className="fav__text">
           <span>{username || 'Full Name'}</span>

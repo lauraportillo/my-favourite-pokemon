@@ -27,9 +27,14 @@
 }
 
 .pokeTitle {
-  text-transform: capitalize;
-  font-size: 20px;
   color: $color-2;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.pokeSubtitle{
+  color: $color-2;
+  font-size: 12px; 
+  margin-top: 5px; 
 }
 .pokeTypes {
   font-size: 14px;
