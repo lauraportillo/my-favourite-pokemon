@@ -14,11 +14,14 @@ import '../stylesheets/Reset.scss';
 const App = () => {
 
   const { isLoading, pokemons } = usePokemon();
-
+  const [currentPage, setCurrentPage] = useState(0);
   const [fav, setFav] = useState({});
   const [name, setName] = useState('');
   const [username, setUsername] = useState(''); 
 
+  const paginatedPokemons = () => {
+    return pokemons.slice(currentPage, currentPage + 20);
+  }
 
   // Function that handles changes to inputs and identifies which input the change is being made to.
   const handleFilter = (inputChange) => {
@@ -27,7 +30,7 @@ const App = () => {
     }
   }
   // Filter
-  const filterPokemons = pokemons
+  const filterPokemons = paginatedPokemons()
     .filter((pokemon) => {
       return pokemon.name.toLowerCase().includes(name.toLowerCase());
     })
