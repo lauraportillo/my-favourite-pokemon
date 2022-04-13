@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { usePokemon } from '../hooks/usePokemon';
 import Header from './Header';
 import Spinner from './Spinner';
@@ -12,37 +12,29 @@ import '../stylesheets/Reset.scss';
 
 
 const App = () => {
-// en pokemons tengo un array con todos los pokemons, nombre, foto y id PERO NO TENGO LOS TIPOS...
-  const { isLoading, pokemons: pokemonData } = usePokemon();
 
-  console.log(pokemonData);
-  // console.log(isLoading);
+  const { isLoading, pokemons } = usePokemon();
 
-  // ERROR: TENEMOS QUE PODER ENCONTRAR LOS NOMBRES DE TODAS LAS PÁGINAS!!!!!
-
-  // const [pokemonData, setPokemonData] = useState([]);
   const [fav, setFav] = useState({});
   const [name, setName] = useState('');
   const [username, setUsername] = useState(''); 
 
 
-
-
-  //definición de la función que maneja los cambios en los inputs e indentifica en qué input se está realizando el cambio.
+  // Function that handles changes to inputs and identifies which input the change is being made to.
   const handleFilter = (inputChange) => {
     if (inputChange.key === 'name') {
       setName(inputChange.value);
     }
   }
-  //filtrar
-  const filterPokemons = pokemonData
+  // Filter
+  const filterPokemons = pokemons
     .filter((pokemon) => {
       return pokemon.name.toLowerCase().includes(name.toLowerCase());
     })
 
   // Function that handles my favourite pokemon
   const handlePokemon = (clickedId) => {
-    const pokemonSelected = pokemonData.find((pokemon) => {
+    const pokemonSelected = pokemons.find((pokemon) => {
       return pokemon.id === clickedId;
     });
 
@@ -63,7 +55,7 @@ const App = () => {
   };
 
   // Sorted alphabetically from a to z
-  // pokemonData.sort((a, z) => a.name.localeCompare(z.name));
+  // pokemons.sort((a, z) => a.name.localeCompare(z.name));
 
   return (
     <div className="containerBody">
@@ -75,8 +67,6 @@ const App = () => {
         {/* <PaginationButtons prev={prev} next={next} /> */}
         <PaginationButtons />
         {isLoading && <Spinner />}
-
-        {/* <PokeList pokemons={pokemonData} handlePokemon={handlePokemon} /> */}
         <PokeList pokemons={filterPokemons} handlePokemon={handlePokemon} />
 
       </main>
