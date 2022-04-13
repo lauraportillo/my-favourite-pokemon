@@ -11,7 +11,7 @@ const Favorite = ({ username, pokemon }) => {
           <img className="fav__star--image" src={pokemon?.pic || image} alt="my favorite pokemon" />
         </div>
         <div className="fav__text">
-          <span>{username || 'Full Name'}</span>
+          <span className="fav__text--username">{username || 'Full Name'}</span>
           <span className="fav__text--favPoke">{pokemon.name || 'Favorite Pokemon'}</span>
         </div>
       </div>

@@ -13,7 +13,7 @@ const Pokemon = ({ pokemon, handlePokemon }) => {
   //   );
   // });
 
-  // HACER UN CONDICIONAL PARA LO TAMAÑOS DE LETRA
+  // HACER UN CONDICIONAL PARA LOS TAMAÑOS DE LETRA
 
   return (
     <article className="pokeCard" id={pokemon?.id} onClick={handleClick}>
