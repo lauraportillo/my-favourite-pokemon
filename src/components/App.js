@@ -23,6 +23,16 @@ const App = () => {
     return pokemons.slice(currentPage, currentPage + 20);
   }
 
+  const next = () => {
+    setCurrentPage(currentPage + 20);
+  }
+
+  const prev = () => {
+    if (currentPage > 0) {
+      setCurrentPage(currentPage - 20);
+    }
+  }
+
   // Function that handles changes to inputs and identifies which input the change is being made to.
   const handleFilter = (inputChange) => {
     if (inputChange.key === 'name') {
@@ -67,8 +77,7 @@ const App = () => {
         <Favorite username={username} pokemon={fav} />
         <Form name={name} handleFilter={handleFilter} username={username} handleName={handleName} handleReset={handleReset} />
         <h3 className="subtitle"> choose your favorite one!</h3>
-        {/* <PaginationButtons prev={prev} next={next} /> */}
-        <PaginationButtons />
+        <PaginationButtons prev={prev} next={next} />
         {isLoading && <Spinner />}
         <PokeList pokemons={filterPokemons} handlePokemon={handlePokemon} />
 
