@@ -21,21 +21,21 @@ const App = () => {
 
   const paginatedPokemons = () => {
     if (name.length === 0) {
-      return pokemons.slice(currentPage, currentPage + 20);
+      return pokemons.slice(currentPage, currentPage + 8);
     }
     const filtered = pokemons.filter(poke => poke.name.includes(name));
-    return filtered.slice(currentPage, currentPage + 20);
+    return filtered.slice(currentPage, currentPage + 8);
   }
 
   const next = () => {
-    if (pokemons.filter(poke => poke.name.includes(name)).length > currentPage + 20) {
-      setCurrentPage(currentPage + 20);
+    if (pokemons.filter(poke => poke.name.includes(name)).length > currentPage + 8) {
+      setCurrentPage(currentPage + 8);
     }
   }
 
   const prev = () => {
     if (currentPage > 0) {
-      setCurrentPage(currentPage - 20);
+      setCurrentPage(currentPage - 8);
     }
   }
 
@@ -72,6 +72,7 @@ const App = () => {
     setName('');
     setUsername('');
     setFav({});
+    setCurrentPage(0);
   };
 
   // Sorted alphabetically from a to z
