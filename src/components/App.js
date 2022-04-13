@@ -20,7 +20,11 @@ const App = () => {
   const [username, setUsername] = useState(''); 
 
   const paginatedPokemons = () => {
-    return pokemons.slice(currentPage, currentPage + 20);
+    if (name.length === 0) {
+      return pokemons.slice(currentPage, currentPage + 20);
+    }
+    const filtered = pokemons.filter(poke => poke.name.includes(name));
+    return filtered.slice(currentPage, currentPage + 20);
   }
 
   const next = () => {
@@ -36,6 +40,7 @@ const App = () => {
   // Function that handles changes to inputs and identifies which input the change is being made to.
   const handleFilter = (inputChange) => {
     if (inputChange.key === 'name') {
+      setCurrentPage(0);
       setName(inputChange.value);
     }
   }
