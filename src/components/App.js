@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
-import Spinner from './Spinner';
+// import Spinner from './Spinner';
 import Favorite from './Favorite';
 import Form from './Form';
 import PaginationButtons from './PaginationButtons';
 import PokeList from './PokeList';
 import Footer from './Footer';
-import { getAllPokemon, getPokemon } from '../services/getDataFromApi';
+// import { getAllPokemon, getPokemon } from '../services/getDataFromApi';
 import '../stylesheets/App.scss';
 import '../stylesheets/Reset.scss';
 import { usePokemon } from '../hooks/usePokemon';
@@ -29,46 +29,48 @@ const App = () => {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
 
-  useEffect(() => {
-    async function fetchData() {
-      let response = await getAllPokemon(initialUrl);
-      setNextUrl(response.next);
-      setPrevUrl(response.previous);
-      await loadingPokemon(response.results);
-      setLoading(false);
-    }
-    fetchData();
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     let response = await getAllPokemon(initialUrl);
+  //     setNextUrl(response.next);
+  //     setPrevUrl(response.previous);
+  //     await loadingPokemon(response.results);
+  //     setLoading(false);
+  //   }
+  //   fetchData();
 
-  }, []);
+  // }, []);
 
-  const next = async () => {
-    setLoading(true);
-    let data = await getAllPokemon(nextUrl);
-    await loadingPokemon(data.results);
-    setNextUrl(data.next);
-    setPrevUrl(data.previous);
-    setLoading(false);
-  }
+  // const next = async () => {
+  //   setLoading(true);
+  //   let data = await getAllPokemon(nextUrl);
+  //   await loadingPokemon(data.results);
+  //   setNextUrl(data.next);
+  //   setPrevUrl(data.previous);
+  //   setLoading(false);
+  // }
 
-  const prev = async () => {
-    if (!prevUrl) return;
-    setLoading(true);
-    let data = await getAllPokemon(prevUrl);
-    await loadingPokemon(data.results);
-    setNextUrl(data.next);
-    setPrevUrl(data.previous);
-    setLoading(false);
-  }
+  // const prev = async () => {
+  //   if (!prevUrl) return;
+  //   setLoading(true);
+  //   let data = await getAllPokemon(prevUrl);
+  //   await loadingPokemon(data.results);
+  //   setNextUrl(data.next);
+  //   setPrevUrl(data.previous);
+  //   setLoading(false);
+  // }
 
-  const loadingPokemon = async data => {
-    let pokeData = await Promise.all(
-      data.map(async pokemon => {
-        let pokemonRecord = await getPokemon(pokemon.url);
-        return pokemonRecord;
-      })
-    );
-    setPokemonData(pokeData);
-  }
+  // const loadingPokemon = async data => {
+  //   let pokeData = await Promise.all(
+  //     data.map(async pokemon => {
+  //       let pokemonRecord = await getPokemon(pokemon.url);
+  //       return pokemonRecord;
+  //     })
+  //   );
+  //   setPokemonData(pokeData);
+  // }
+
+
   //definición de la función que maneja los cambios en los inputs e indentifica en qué input se está realizando el cambio.
   const handleFilter = (inputChange) => {
     if (inputChange.key === 'name') {
@@ -113,8 +115,9 @@ const App = () => {
         <Favorite username={username} pokemon={fav} />
         <Form name={name} handleFilter={handleFilter} username={username} handleName={handleName} handleReset={handleReset} />
         <h3 className="subtitle"> choose your favorite one!</h3>
-        <PaginationButtons prev={prev} next={next} />
-        {loading && <Spinner />}
+        {/* <PaginationButtons prev={prev} next={next} /> */}
+        <PaginationButtons />
+        {/* {loading && <Spinner />} */}
 
         {/* <PokeList pokemons={pokemonData} handlePokemon={handlePokemon} /> */}
         <PokeList pokemons={filterPokemons} handlePokemon={handlePokemon} />
