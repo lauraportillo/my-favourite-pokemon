@@ -13,10 +13,26 @@ const Pokemon = ({ pokemon, handlePokemon }) => {
   //   );
   // });
 
+  const rederPokemonImage = () => {
+    if (pokemon.id !== '10158') {
+      return (
+        <img className="pokeCard__imgContainer--item" src={pokemon?.pic} alt={pokemon?.name} />
+      )
+    }
+    if (pokemon.id === '10158') {
+      return (
+        <img src="../images/pokemonLogo.png" alt={pokemon?.name} />
+      )
+    }
+  }
+
+
+
   return (
     <article className="pokeCard" id={pokemon?.id} onClick={handleClick}>
       <div className="pokeCard__imgContainer">
-        <img className="pokeCard__imgContainer--item" src={pokemon?.pic} alt={pokemon?.name} />
+        {/* <img className="pokeCard__imgContainer--item" src={pokemon?.pic} alt={pokemon?.name} /> */}
+        {rederPokemonImage()}
       </div>
 
       <div className="pokeDescription">
