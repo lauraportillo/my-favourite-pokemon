@@ -19,5 +19,3 @@ export const fetchAllPokemons = async () => {
 
 // fetchAllPokemons returns the transformed array
 
-//VER CÓMO SACAR CARACTERÍSTICAS DE CADA POKEMON, HABRÁ QUE HACER UNA NUEVA LLAMADA?
-
