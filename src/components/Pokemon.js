@@ -31,7 +31,10 @@ const Pokemon = ({ pokemon, handlePokemon }) => {
 
   return (
     <article className="pokeCard" id={pokemon?.id} onClick={handleClick}>
-      <img src={pokemon?.pic} alt={pokemon?.name} />
+      <div className="pokeCard__imgContainer">
+        <img className="pokeCard__imgContainer--item" src={pokemon?.pic} alt={pokemon?.name} />
+      </div>
+
       <div className="pokeDescription">
         {/* <h2 className="pokeTitle"> {pokemon?.name} </h2> */}
         {renderPokeName()}

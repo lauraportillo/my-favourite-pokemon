@@ -19,6 +19,14 @@
   transform: scale(0.8);
 }
 
+.pokeCard__imgContainer{
+width: 100px;
+}
+
+.pokeCard__imgContainer--item{
+  width: 100%;
+}
+
 .pokeDescription {
   display: flex;
   flex-direction: column;
