@@ -1,0 +1,37 @@
+@import 'Variables';
+
+.notFoundCard{
+  width: 140px;
+  height: 210px;
+  background: linear-gradient($color-2, $color-4);
+  padding: 20px;
+  border-radius: 20px;
+  border: solid $color-5 1px;
+  margin: 10px;
+}
+
+.notFoundCard__imgContainer{
+    width: 100px;
+}
+
+.notFoundCard__imgContainer--item{
+    width: 100%;
+}
+
+.notFoundDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.notFoundTitle {
+    color: $color-2;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+.notFoundSubTitle {
+    color: $color-2;
+    margin-top: 5px;
+  }

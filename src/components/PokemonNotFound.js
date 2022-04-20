@@ -1,14 +1,16 @@
 import image from '../images/notFound.png';
+import '../stylesheets/PokemonNotFound.scss';
 
 const PokemonNotFound = () => {
     return (
-        <article className="pokeCard" >
-            <div className="pokeCard__imgContainer">
-                <img className="pokeCard__imgContainer--item" src={image} alt='not found' />
+        <article className="notFoundCard" >
+            <div className="notFoundCard__imgContainer">
+                <img className="notFoundCard__imgContainer--item" src={image} alt='not found' />
             </div>
 
-            <div className="pokeDescription">
-                <h2 className="pokeTitle"> not found </h2>
+            <div className="notFoundDescription">
+                <h2 className="notFoundTitle"> not found </h2>
+                <small className="notFoundSubTitle"> try another one! </small>
 
             </div>
         </article>
