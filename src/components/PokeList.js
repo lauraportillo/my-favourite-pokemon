@@ -19,7 +19,7 @@ const PokeList = ({ pokemons, handlePokemon }) => {
   }
 
   return (
-    <div className="pokeContainer">
+    <div >
       <ul className="pokeList">{renderPokemon()}</ul>
     </div>
   );
