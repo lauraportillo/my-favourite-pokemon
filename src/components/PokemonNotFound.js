@@ -1,8 +1,17 @@
-import React from 'react'
+import image from '../images/notFound.png';
 
 const PokemonNotFound = () => {
     return (
-        <div>PokemonNotFound</div>
+        <article className="pokeCard" >
+            <div className="pokeCard__imgContainer">
+                <img className="pokeCard__imgContainer--item" src={image} alt='not found' />
+            </div>
+
+            <div className="pokeDescription">
+                <h2 className="pokeTitle"> not found </h2>
+
+            </div>
+        </article>
     )
 }
 
