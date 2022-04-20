@@ -23,12 +23,12 @@ const App = () => {
     if (name.length === 0) {
       return pokemons.slice(currentPage, currentPage + 8);
     }
-    const filtered = pokemons.filter(poke => poke.name.includes(name));
+    const filtered = pokemons.filter(poke => poke.name.includes(name.toLowerCase()));
     return filtered.slice(currentPage, currentPage + 8);
   }
 
   const next = () => {
-    if (pokemons.filter(poke => poke.name.includes(name)).length > currentPage + 8) {
+    if (pokemons.filter(poke => poke.name.includes(name.toLowerCase())).length > currentPage + 8) {
       setCurrentPage(currentPage + 8);
     }
   }
