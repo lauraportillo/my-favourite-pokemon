@@ -6,6 +6,8 @@ export const usePokemon = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [pokemons, setPokemons] = useState([]);
 
+    console.log(pokemons);
+
     useEffect(() => {
         fetchAllPokemons()
             .then(pokemons => {
