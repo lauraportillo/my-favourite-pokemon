@@ -2,12 +2,13 @@
 
 .form {
   margin-top: 50px;
+}
+.form__div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .form__input {
   width: 220px;
   height: 30px;
@@ -48,16 +49,15 @@
   .form {
     flex-direction: row; 
   }
-  .form__input {  
-    margin-bottom: 0;
+  .form__div {
+    flex-direction: row;
+  }
+  .form__input,
+  .form__reset,
+  .form__print {  
+    margin-bottom: 5px;
     margin-right: 5px;
     width: 250px;
-  }
-  .form__reset {
-    width: 100px;
-  }
-  .form__print {
-    width: 100px;
   }
 }
 
