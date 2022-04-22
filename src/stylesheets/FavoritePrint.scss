@@ -2,27 +2,28 @@
 
 // FORMAS EN CSS https://css-tricks.com/the-shapes-of-css/
 
-.containerFav {
+.containerFavPrint {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 200px;
 }
 
-.fav {
+.favPrint {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transform: scale(1.3);
-  width: 220px;
+  width: 520px;
   margin: 20px;
   padding: 40px;
   border: solid $color-2 5px;
   border-radius: 50px;
 }
 
-.fav__text {
+.favPrint__text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,14 +32,14 @@
   font-size: 16px;
   text-transform: capitalize;
 }
-.fav__text--username{
+.favPrint__text--username{
   color: $color-2;
   text-transform: capitalize;
   font-size: 20px;
   font-weight: 600;
   margin-top: 15px;
 }
-.fav__text--favPoke {
+.favPrint__text--favPoke {
   text-transform: capitalize;
   font-size: 20px;
   color: $color-1;
@@ -46,7 +47,7 @@
 }
 
 // STAR SHAPE START
-.fav__star {
+.favPrint__star {
   margin: 50px 0;
   position: relative;
   display: block;
@@ -59,7 +60,7 @@
   transform: rotate(35deg);
   z-index: -1;
 }
-.fav__star:before {
+.favPrint__star:before {
   border-bottom: 80px solid $color-1;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
@@ -73,7 +74,7 @@
   transform: rotate(-35deg);
   z-index: -1;
 }
-.fav__star:after {
+.favPrint__star:after {
   position: absolute;
   display: block;
   color: $color-1;
@@ -90,25 +91,25 @@
 }
 
 // STAR SHAPED
-.fav__star--image {
+.favPrint__star--image {
   width: 100px;
   transform: translateX(-50px) rotate(-35deg) scale(0.9);
 }
 
 @media all and (min-width: 768px) {
-  .fav {
+  .favPrint {
     flex-direction: row;
     width: 500px;
     margin: 5px;
     padding: 20px;
   }
-  .fav__text {
+  .favPrint__text {
     align-items: flex-start;
     width: 220px;
     margin-top: 20px;
     margin-left: 20px;
   }
-  .fav__star {
+  .favPrint__star {
     margin-left: 20px;
     margin-right: 10px;
   }

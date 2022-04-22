@@ -94,7 +94,7 @@ const App = () => {
         <PokeList pokemons={filterPokemons} handlePokemon={handlePokemon} />
 
         <div style={{ display: 'none' }} >
-          <FavoritePrint referent={componentRef} />
+          <FavoritePrint referent={componentRef} username={username} pokemon={fav} />
         </div>
 
       </main>
