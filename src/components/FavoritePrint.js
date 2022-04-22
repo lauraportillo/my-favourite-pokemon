@@ -15,7 +15,6 @@ const FavoritePrint = ({ referent, username, pokemon }) => {
                     <img className="favPrint__star--image" src={pokemon?.pic || image} alt="my favorite pokemon" />
                 </div>
                 <div className="favPrint__text">
-                    {/* <span className="favPrint__text--username">{username || 'Full Name'}</span> */}
                     <span className="favPrint__text--favPoke">{pokemon.name || 'Favorite Pokemon'}</span>
                 </div>
             </div>
