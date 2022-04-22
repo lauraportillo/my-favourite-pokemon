@@ -24,24 +24,38 @@
   height: 30px;
   border-radius: 10px;
   border: solid $color-2 1px;
-  background-color: inherit;
+  background-color: $color-2;
   text-align: center;
   font-size: 16px;
-  color: $color-2;
+  color: $color-1;
   outline: inherit;
   margin-bottom: 5px;
+  cursor: pointer;
+}
+.form__reset:hover{
+  border: solid $color-2 2px;
+  background-color: $color-1;
+  color: $color-2;
+  font-weight: 600;
 }
 .form__print {
   width: 220px;
   height: 30px;
   border-radius: 10px;
   border: solid $color-2 1px;
-  background-color: inherit;
+  background-color: $color-2;
   text-align: center;
   font-size: 16px;
-  color: $color-2;
+  color: $color-1;
   outline: inherit;
   margin-bottom: 5px;
+  cursor: pointer;
+}
+.form__print:hover{
+  border: solid $color-2 2px;
+  background-color: $color-1;
+  color: $color-2;
+  font-weight: 600;
 }
 
 
