@@ -1,8 +1,8 @@
 import React from 'react'
 
-const FavoritePrint = () => {
+const FavoritePrint = ({ referent }) => {
     return (
-        <div>FavoritePrint</div>
+        <div ref={referent} >FavoritePrint</div>
     )
 };
 

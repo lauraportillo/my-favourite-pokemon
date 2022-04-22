@@ -1,8 +1,8 @@
 import '../stylesheets/Form.scss';
 
-const PrintButton = () => {
+const PrintButton = ({ handlePrint }) => {
     return (
-        <button className="form__print">Print</button>
+        <button className="form__print" onClick={handlePrint}>Print</button>
     )
 };
 

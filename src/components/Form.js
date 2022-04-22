@@ -5,19 +5,19 @@ import PrintButton from './PrintButton';
 import '../stylesheets/Form.scss';
 
 
-const Form = (props) => {
+const Form = ({ handleName, username, handleFilter, name, handleReset, handlePrint }) => {
   const handleForm = (ev) => {
     ev.preventDefault();
   };
   return (
     <form onSubmit={handleForm} className="form">
       <div className="form__div">
-      <Input handleName={props.handleName} username={props.username} />
-      <FilterByName handleFilter={props.handleFilter} name={props.name} />
+        <Input handleName={handleName} username={username} />
+        <FilterByName handleFilter={handleFilter} name={name} />
       </div>
       <div className="form__div">
-      <ResetButton handleReset={props.handleReset} />
-      <PrintButton />
+        <ResetButton handleReset={handleReset} />
+        <PrintButton handlePrint={handlePrint} />
       </div>
     </form>
   );
