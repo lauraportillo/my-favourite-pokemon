@@ -92,11 +92,9 @@ const App = () => {
         <PaginationButtons prev={prev} next={next} />
         {isLoading && <Spinner />}
         <PokeList pokemons={filterPokemons} handlePokemon={handlePokemon} />
-
         <div style={{ display: 'none' }} >
           <FavoritePrint referent={componentRef} username={username} pokemon={fav} />
         </div>
-
       </main>
       <Footer />
     </div>

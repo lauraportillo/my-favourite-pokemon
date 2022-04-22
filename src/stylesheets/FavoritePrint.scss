@@ -1,6 +1,31 @@
 @import 'Variables';
 
-// FORMAS EN CSS https://css-tricks.com/the-shapes-of-css/
+.favHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.favHeader__image {
+    background: url('../images/pokemonLogo.png') no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 200px;
+    transform: scale(1.4);
+    width: 100%;
+  }
+.favHeader__text {
+    margin: 15px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px ;
+  }
+.favHeader__text--pokemon {
+    text-transform: capitalize;
+    color: $color-2;
+    font-weight: bolder;
+  }
 
 .containerFavPrint {
   display: flex;
@@ -16,7 +41,7 @@
   justify-content: center;
   align-items: center;
   transform: scale(1.3);
-  width: 520px;
+  width: 280px;
   margin: 20px;
   padding: 40px;
   border: solid $color-2 5px;
