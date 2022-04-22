@@ -6,7 +6,6 @@
     justify-content: center;
     align-items: center;
   }
-  
 .favHeader__image {
     background: url('../images/pokemonLogo.png') no-repeat;
     background-size: contain;
@@ -114,31 +113,8 @@
   content: '';
   z-index: -1;
 }
-
 // STAR SHAPED
 .favPrint__star--image {
   width: 100px;
   transform: translateX(-50px) rotate(-35deg) scale(0.9);
-}
-
-@media all and (min-width: 768px) {
-  .favPrint {
-    flex-direction: row;
-    width: 500px;
-    margin: 5px;
-    padding: 20px;
-  }
-  .favPrint__text {
-    align-items: flex-start;
-    width: 220px;
-    margin-top: 20px;
-    margin-left: 20px;
-  }
-  .favPrint__star {
-    margin-left: 20px;
-    margin-right: 10px;
-  }
-}
-
-@media all and (min-width: 1280px) {
 }
