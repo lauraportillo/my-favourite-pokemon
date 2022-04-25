@@ -18,6 +18,7 @@ const Input = (props) => {
         placeholder="Enter your name..."
         value={props.username}
         onChange={handleChange}
+        maxLength="15"
       />
     </>
   );
