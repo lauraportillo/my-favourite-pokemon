@@ -18,7 +18,7 @@
     margin: 15px;
     font-size: 20px;
     text-align: center;
-    margin-bottom: 50px ;
+    margin-bottom: 60px;
   }
 .favHeader__text--pokemon {
     text-transform: capitalize;
@@ -54,20 +54,24 @@
   width: 220px;
   margin-top: 30px;
   font-size: 16px;
-  text-transform: capitalize;
 }
 .favPrint__text--username{
   color: $color-2;
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
   margin-top: 15px;
 }
+.favPrint__text--is{
+  color: $color-3;
+  font-size: 20px;
+  margin-top: 10px;
+}
 .favPrint__text--favPoke {
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 25px;
   color: $color-1;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 // STAR SHAPE START
