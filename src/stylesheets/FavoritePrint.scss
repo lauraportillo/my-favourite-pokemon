@@ -1,5 +1,12 @@
 @import 'Variables';
 
+.containerFavPrint {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
 .favHeader {
     display: flex;
     flex-direction: column;
@@ -18,22 +25,14 @@
     margin: 15px;
     font-size: 20px;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
+    margin-top: 40px;
   }
 .favHeader__text--pokemon {
     text-transform: capitalize;
     color: $color-2;
     font-weight: bolder;
   }
-
-.containerFavPrint {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 200px;
-}
-
 .favPrint {
   display: flex;
   flex-direction: column;
