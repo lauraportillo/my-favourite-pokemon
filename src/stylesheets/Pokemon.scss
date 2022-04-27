@@ -10,7 +10,7 @@
 
 .pokeCard {
   width: 140px;
-  height: 210px;
+  height: 220px;
   background: linear-gradient($color-1, $color-4);
   padding: 20px;
   border-radius: 20px;
@@ -33,6 +33,11 @@ width: 100px;
 
 .pokeCard__imgContainer--item{
   width: 100%;
+}
+.pokeCard__imgContainer--null{
+  width: 100px;
+  height: 100px;
+  opacity: 0.6;
 }
 
 .pokeDescription {
@@ -60,9 +65,6 @@ width: 100px;
 }
 .pokeTypes {
   display: flex;
-  // font-size: 14px;
-  // color: $color-5;
-  // padding: 5px;
 }
 
 @media all and (min-width: 768px) {
