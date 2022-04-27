@@ -7,7 +7,7 @@ export const fetchAllPokemons = async () => {
         const pokeArr = poke.url.split('/');
         const id = pokeArr[6];
         const respPokemon = await pokemonApi.get(`/pokemon/${id}/`);
-        console.log(respPokemon);
+
         return {
             id,
             pic: respPokemon.data.sprites.front_default,
