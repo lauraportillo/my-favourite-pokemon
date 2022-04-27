@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { usePokemon } from '../hooks/usePokemon';
+import { useReactToPrint } from 'react-to-print';
 import Header from './Header';
 import Spinner from './Spinner';
 import Favorite from './Favorite';
+import FavoritePrint from './FavoritePrint';
 import Form from './Form';
 import PaginationButtons from './PaginationButtons';
 import PokeList from './PokeList';
@@ -10,14 +12,16 @@ import Footer from './Footer';
 import '../stylesheets/App.scss';
 import '../stylesheets/Reset.scss';
 
-
 const App = () => {
-
   const { isLoading, pokemons } = usePokemon();
   const [currentPage, setCurrentPage] = useState(0);
   const [fav, setFav] = useState({});
   const [name, setName] = useState('');
   const [username, setUsername] = useState(''); 
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
 
   const paginatedPokemons = () => {
     if (name.length === 0) {
@@ -83,12 +87,14 @@ const App = () => {
       <Header />
       <main className="containerMain">
         <Favorite username={username} pokemon={fav} />
-        <Form name={name} handleFilter={handleFilter} username={username} handleName={handleName} handleReset={handleReset} />
+        <Form name={name} handleFilter={handleFilter} username={username} handleName={handleName} handleReset={handleReset} handlePrint={handlePrint} />
         <h3 className="subtitle"> choose your favorite one!</h3>
         <PaginationButtons prev={prev} next={next} />
         {isLoading && <Spinner />}
         <PokeList pokemons={filterPokemons} handlePokemon={handlePokemon} />
-
+        <div style={{ display: 'none' }} >
+          <FavoritePrint referent={componentRef} username={username} pokemon={fav} />
+        </div>
       </main>
       <Footer />
     </div>

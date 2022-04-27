@@ -2,7 +2,6 @@ import { pokemonApi } from "../services/pokemonApi"
 
 export const fetchAllPokemons = async () => {
     const resp = await pokemonApi.get('/pokemon?limit=1500');
-    console.log(resp);
 
     return await Promise.all(resp.data.results.map(async (poke) => {
         const pokeArr = poke.url.split('/');

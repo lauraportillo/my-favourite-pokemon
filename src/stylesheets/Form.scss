@@ -2,12 +2,13 @@
 
 .form {
   margin-top: 50px;
+}
+.form__div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .form__input {
   width: 220px;
   height: 30px;
@@ -23,24 +24,54 @@
   height: 30px;
   border-radius: 10px;
   border: solid $color-2 1px;
-  background-color: inherit;
+  background-color: $color-2;
   text-align: center;
   font-size: 16px;
-  color: $color-2;
+  color: $color-1;
   outline: inherit;
+  margin-bottom: 5px;
+  cursor: pointer;
 }
+.form__reset:hover{
+  border: solid $color-2 2px;
+  background-color: $color-1;
+  color: $color-2;
+  font-weight: 600;
+}
+.form__print {
+  width: 220px;
+  height: 30px;
+  border-radius: 10px;
+  border: solid $color-2 1px;
+  background-color: $color-2;
+  text-align: center;
+  font-size: 16px;
+  color: $color-1;
+  outline: inherit;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.form__print:hover{
+  border: solid $color-2 2px;
+  background-color: $color-1;
+  color: $color-2;
+  font-weight: 600;
+}
+
 
 @media all and (min-width: 768px) {
   .form {
     flex-direction: row; 
   }
-  .form__input {  
-    margin-bottom: 0;
+  .form__div {
+    flex-direction: row;
+  }
+  .form__input,
+  .form__reset,
+  .form__print {  
+    margin-bottom: 5px;
     margin-right: 5px;
     width: 250px;
-  }
-  .form__reset {
-    width: 100px;
   }
 }
 
