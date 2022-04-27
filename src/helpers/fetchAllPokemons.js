@@ -12,6 +12,7 @@ export const fetchAllPokemons = async () => {
             id,
             pic: respPokemon.data.sprites.front_default,
             name: respPokemon.data.name,
+            types: respPokemon.data.types
         };
     }));
 }
