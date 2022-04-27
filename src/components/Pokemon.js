@@ -1,5 +1,5 @@
 import '../stylesheets/Pokemon.scss';
-import image from '../images/pokemonBall.png';
+import image from '../images/pokemonBallBlue100.png';
 
 const Pokemon = ({ pokemon, handlePokemon }) => {
   const handleClick = (ev) => {
@@ -17,7 +17,6 @@ const Pokemon = ({ pokemon, handlePokemon }) => {
   return (
     <article className="pokeCard" id={pokemon?.id} onClick={handleClick}>
       <div className="pokeCard__imgContainer">
-        {/* <img className="pokeCard__imgContainer--item" src={pokemon?.pic} alt={pokemon?.name} /> */}
         {pokemon?.pic === null ? <img className="pokeCard__imgContainer--null" src={image} alt={pokemon?.name} /> : <img className="pokeCard__imgContainer--item" src={pokemon?.pic} alt={pokemon?.name} />}
       </div>
 
